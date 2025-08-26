@@ -1,8 +1,21 @@
 package com.example.model;
 
+import jakarta.persistence.*;
+
+import java.util.Set;
+
+@Entity
+@Table(name = "Roles")
 public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "RoleID")
     private int id;
+
+    @Column(name = "RoleName", unique = true, nullable = false)
     private String name;
+    @ManyToMany(mappedBy = "roles")
+    private Set<User> users;
 
     public Role(int id, String name) {
         this.id = id;
