@@ -38,6 +38,13 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>12.4.1.jre11</version>
         </dependency>
+
+        <!-- THƯ VIỆN MỚI: Hibernate (JPA Implementation) -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.4.4.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
